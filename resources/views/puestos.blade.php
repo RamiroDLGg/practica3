@@ -170,7 +170,13 @@
         <h1>Bienvenido Puestos</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
     </div>
-    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <footer>
+        @if (Auth::check())
+            <p>Usuario: {{ Auth::user()->name }} | Correo: {{ Auth::user()->email }}</p>
+        @else
+            <p>No hay un usuario autenticado</p>
+        @endif
+    </footer>
 </body>
 
 </html>

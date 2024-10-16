@@ -102,7 +102,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="{{ route('plantillainicio') }}">Practica 2</a>
+            <a class="navbar-brand text-white" href="{{ route('plantilla1') }}">Practica 2</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -170,6 +170,15 @@
         <h1>Bienvenido Usuario</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada.</p>
     </div>
+
+    <!-- Footer con email y nombre del usuario autenticado -->
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <footer>
+        @if (Auth::check())
+            <p>Usuario: {{ Auth::user()->name }} | Correo: {{ Auth::user()->email }}</p>
+        @else
+            <p>No hay un usuario autenticado</p>
+        @endif
+    </footer>
     
 </body>
 
